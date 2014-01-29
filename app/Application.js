@@ -18,6 +18,7 @@ Ext.define('Packt.Application', {
 			cls : 'x-splash-icon'
 		});
 	},
+	
 	launch : function() {
 		var task = new Ext.util.DelayedTask(function() {
 			splashscreen.fadeOut({

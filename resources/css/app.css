@@ -20,4 +20,7 @@
 	height:70px;
 }
 
+
 .key {  background-image:url('../icons/key.png') !important; } 
+.cancel {  background-image:url('../icons/cancel.png') !important; } 
+.key_go {  background-image:url('../icons/key_go.png') !important; } 
