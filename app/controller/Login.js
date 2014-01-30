@@ -25,7 +25,34 @@ Ext.define('Packt.controller.Login', {
 				params : {
 					user : user,
 					password : pass
-				}
+				},
+				failure : function(conn, response, options, eOpts) {
+					Ext.Msg.show({
+						title : 'Error!',
+						msg : conn.responseText,
+						icon : Ext.Msg.ERROR,
+						buttons : Ext.Msg.OK
+					});
+				},
+				success : function(conn, response, options, eOpts) {
+					var result = Ext.JSON.decode(conn.responseText, true);
+					if (!result) {
+						result = {};
+						result.success = false;
+						result.msg = conn.responseText;
+					}
+					if (result.success) {
+						login.close();
+						Ext.create('Packt.view.MyViewport');
+					} else {
+						Ext.Msg.show({
+							title : 'Fail!',
+							msg : result.msg,
+							icon : Ext.Msg.ERROR,
+							buttons : Ext.Msg.OK
+						});
+					}
+				},
 			});
 		}
 	},
