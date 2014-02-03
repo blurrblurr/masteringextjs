@@ -1,26 +1,54 @@
 .x-mask.splashscreen {
-	background-color:white;
-	opacity:1;
+    background-color: white;
+    opacity: 1;
 }
 .x-mask-msg.splashscreen, .x-mask-msg.splashscreen div {
-	font-size:16px;
-	font-weight:bold;
-	padding:30px 5px 5px 5px;
-	border:none;
-	background-color:transparent;
-	background-position:top center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 30px 5px 5px 5px;
+    border: none;
+    background-color: transparent;
+    background-position: top center;
 }
 .x-message-box .x-window-body .x-box-inner {
-	min-height:110px !important;
+    min-height: 110px !important;
 }
 .x-splash-icon {
-	background-image:url('../images/packt-logo.png') !important;
-	margin-top:-30px;
-	margin-bottom:15px;
-	height:70px;
+    background-image: url('../images/packt-logo.png') !important;
+    margin-top: -30px;
+    margin-bottom: 15px;
+    height: 70px;
 }
 
+.capslock {
+    background: url('../icons/bullet_error.png') no-repeat center left;
+    padding: 2px;
+    padding-left: 20px;
+    font-weight: 700;
+}
 
-.key {  background-image:url('../icons/key.png') !important; } 
-.cancel {  background-image:url('../icons/cancel.png') !important; } 
-.key_go {  background-image:url('../icons/key_go.png') !important; } 
+#titleHeader {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Grande', Arial, Sans;
+}
+
+.key {
+    background-image: url('../icons/key.png') !important;
+}
+.cancel {
+    background-image: url('../icons/cancel.png') !important;
+}
+.key_go {
+    background-image: url('../icons/key_go.png') !important;
+} 
+.pt_BR {  
+    background-image:url('../flags/br.png') !important;
+}
+.en { 
+    background-image:url('../flags/us.png') !important; 
+}
+.es {  
+    background-image:url('../flags/es.png') !important;
+}

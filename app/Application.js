@@ -5,7 +5,7 @@ Ext.define('Packt.Application', {
 
 	views : [],
 
-	controllers : ['Login'],
+	controllers : ['Login','TranslationManager'],
 
 	stores : [
 	// TODO: add stores here
@@ -20,6 +20,7 @@ Ext.define('Packt.Application', {
 	},
 	
 	launch : function() {
+		Ext.tip.QuickTipManager.init(); 
 		var task = new Ext.util.DelayedTask(function() {
 			splashscreen.fadeOut({
 				duration : 1000,

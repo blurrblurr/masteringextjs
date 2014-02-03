@@ -12,36 +12,35 @@ $pass = $_POST['password'];
 $userName = stripslashes($userName);
 $pass = stripslashes($pass);
 
-$userName = $mysqli -> real_escape_string($userName);
-$pass = $mysqli -> real_escape_string($pass);
+$userName = $mysqli->real_escape_string($userName);
+$pass = $mysqli->real_escape_string($pass);
 $sql = "SELECT * FROM USER WHERE userName='$userName' and password='$pass'";
 $result = array();
 
-if ($resultdb = $mysqli -> query($sql)) {
+if ($resultdb = $mysqli->query($sql)) {
 
-	// determine number of rows result set
-	$count = $resultdb -> num_rows;
+    // determine number of rows result set
+    $count = $resultdb->num_rows;
 
-	// If result matched $userName and $pass, table row must be 1 row
-	if ($count == 1) {
+    // If result matched $userName and $pass, table row must be 1 row
+    if ($count == 1) {
 
-		$_SESSION['authenticated'] = "yes";
-		$_SESSION['username'] = $userName;
+        $_SESSION['authenticated'] = "yes";
+        $_SESSION['username'] = $userName;
 
-		$result['success'] = true;
-		$result['msg'] = 'User authenticated!';
+        $result['success'] = true;
+        $result['msg'] = 'User authenticated!';
+    } else {
 
-	} else {
+        $result['success'] = false;
+        $result['msg'] = 'Incorrect user or password.';
+    }
 
-		$result['success'] = false;
-		$result['msg'] = 'Incorrect user or password.';
-	}
-
-	/* close result set */
-	$resultdb -> close();
+    /* close result set */
+    $resultdb->close();
 }
 /* close connection */
-$mysqli -> close();
+$mysqli->close();
 
 //JSON encoding
 echo json_encode($result);
