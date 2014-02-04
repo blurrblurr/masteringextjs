@@ -1,7 +1,8 @@
 Ext.define('Packt.controller.Login', {
 	extend : 'Ext.app.Controller',
 
-	requires : ['Packt.util.MD5', 'Packt.util.Util','Packt.util.SessionMonitor'],
+	requires : [
+        'Packt.view.MyViewport','Packt.util.MD5', 'Packt.util.Util','Packt.util.SessionMonitor'],
 
 	views : ['Login', 'Header', 'authentication.CapsLockTooltip'],
 

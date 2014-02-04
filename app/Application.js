@@ -5,7 +5,7 @@ Ext.define('Packt.Application', {
 
 	views : [],
 
-	controllers : ['Login','TranslationManager'],
+	controllers : ['Login','TranslationManager','Menu'],
 
 	stores : [
 	// TODO: add stores here

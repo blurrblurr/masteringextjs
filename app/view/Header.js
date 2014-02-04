@@ -6,7 +6,7 @@ Ext.define('Packt.view.Header', {
     style: 'border-bottom: 4px solid #4c72a4;',
     items: [{
             xtype: 'label',
-            html: '<div id="titleHeader">Video Store Manager<span style="font-size:12px;"> - Mastering Ext JS</span></div>'
+            html: '<div id="titleHeader">Fatwa Planologi<span style="font-size:12px;"> - BP Batam</span></div>'
         }, {
             xtype: 'tbfill'
         }, {
@@ -15,7 +15,7 @@ Ext.define('Packt.view.Header', {
             xtype: 'tbseparator'
         }, {
             xtype: 'button',
-            text: "translations.logout",
+            text: translations.logout,
             itemId: 'logout',
             iconCls: 'logout'
         }]
