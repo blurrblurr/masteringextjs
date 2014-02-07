@@ -30,10 +30,12 @@ Ext.define('Packt.view.Login', {
 		items : [{
 			name : 'user',
 			fieldLabel : translations.user,
-			maxLength : 25
+			maxLength : 25,			
+			value:'harjo'
 		}, {
 			inputType : 'password',
 			name : 'password',
+			value:'123456',
 			fieldLabel : translations.password,
 			maxLength : 15,
 			enableKeyEvents : true,

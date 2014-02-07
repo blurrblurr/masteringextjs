@@ -6,6 +6,7 @@ Ext.define('Packt.view.MainPanel', {
 		xtype : 'panel',
 		closable : false,
 		iconCls : 'home',
-		title : 'Home'
+		title : 'Home',
+		layout : 'fit'
 	}]
-});
+}); 

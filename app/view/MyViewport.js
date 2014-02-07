@@ -2,7 +2,9 @@ Ext.define('Packt.view.MyViewport', {
 	extend : 'Ext.container.Viewport',
 	alias : 'widget.mainviewport',
 
-	requires : ['Packt.view.Header'],
+	requires : ['Packt.view.Header',
+        'Packt.view.menu.Accordion',
+        'Packt.view.MainPanel'],
 
 	layout : {
 		type : 'border'
